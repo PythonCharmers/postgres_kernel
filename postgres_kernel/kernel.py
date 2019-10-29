@@ -44,10 +44,13 @@ class PostgresKernel(Kernel):
     implementation = 'postgres_kernel'
     implementation_version = __version__
 
-    language_info = {'name': 'PostgreSQL',
-                     'codemirror_mode': 'sql',
-                     'mimetype': 'text/x-postgresql',
-                     'file_extension': '.sql'}
+    language_info = {
+        'name': 'PostgreSQL',
+        'codemirror_mode': 'sql',
+        'mimetype': 'text/x-postgresql',
+        'file_extension': '.sql',
+        'pygments_lexer': 'sql'
+    }
 
     def __init__(self, **kwargs):
         Kernel.__init__(self, **kwargs)

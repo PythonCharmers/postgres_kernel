@@ -27,7 +27,7 @@ class install_with_kernelspec(install):
                 json.dump(kernel_json, f, sort_keys=True)
             # TODO: Copy resources once they're specified
 
-            kernel_spec.install_kernel_spec(td, 'postgres', user=self.user)
+            kernel_spec.install_kernel_spec(td, 'postgres', user=self.user, replace=True)
 
 with open('README.md') as f:
     readme = f.read()
